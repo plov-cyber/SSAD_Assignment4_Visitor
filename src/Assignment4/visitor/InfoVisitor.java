@@ -9,17 +9,30 @@ import Assignment4.places.Place;
 
 import java.util.Collections;
 
+/**
+ * InfoVisitor class.
+ * Gets the relevant information about each place.
+ */
 public class InfoVisitor implements Visitor {
     private Map map;
 
+    /**
+     * Constructor.
+     */
     public InfoVisitor(Map map) {
         this.map = map;
     }
 
+    /**
+     * Method that adds the place and information about it on map.
+     */
     public void addOnMap(Place place, String placeInfo) {
         map.addVisiblePlace(place, placeInfo);
     }
 
+    /**
+     * Overridden method that gets the information about Museum.
+     */
     @Override
     public void visitMuseum(Museum museum) {
         StringBuilder result = new StringBuilder();
@@ -35,6 +48,9 @@ public class InfoVisitor implements Visitor {
         this.addOnMap(museum, result.toString());
     }
 
+    /**
+     * Overridden method that gets the information about Theatre.
+     */
     @Override
     public void visitTheatre(Theatre theatre) {
         StringBuilder result = new StringBuilder();
@@ -52,6 +68,9 @@ public class InfoVisitor implements Visitor {
         this.addOnMap(theatre, result.toString());
     }
 
+    /**
+     * Overridden method that gets the information about Restaurant.
+     */
     @Override
     public void visitRestaurant(Restaurant restaurant) {
         StringBuilder result = new StringBuilder();

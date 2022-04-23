@@ -5,6 +5,10 @@ import Assignment4.places.extraInfo.Location;
 import Assignment4.places.extraInfo.PlaceType;
 import Assignment4.visitor.Visitor;
 
+/**
+ * Place abstract class.
+ * Used as a place on Map.
+ */
 public abstract class Place {
     private Location location;
     private String name;
@@ -13,6 +17,9 @@ public abstract class Place {
     private String address;
     private String contactNumber;
 
+    /**
+     * Constructor.
+     */
     public Place(Location location, String name, PlaceType type, String address, String contactNumber) {
         this.location = location;
         this.name = name;
@@ -21,14 +28,23 @@ public abstract class Place {
         this.contactNumber = contactNumber;
     }
 
+    /**
+     * Getter for location of place.
+     */
     public Location getLocation() {
         return this.location;
     }
 
+    /**
+     * Getter for name of place.
+     */
     public String getName() {
         return this.name;
     }
 
+    /**
+     * Method that returns the information about place.
+     */
     public String getInformation() {
         String result = "###### " + this.name + " ######\n" +
                 "Address: " + this.address + "\n" +
@@ -36,5 +52,8 @@ public abstract class Place {
         return result;
     }
 
+    /**
+     * Abstract method to accept the visitor.
+     */
     public abstract void accept(Visitor v);
 }
