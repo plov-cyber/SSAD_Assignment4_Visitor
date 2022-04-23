@@ -25,7 +25,16 @@ public abstract class Place {
         return this.location;
     }
 
-    public abstract String getInformation();
+    public String getName() {
+        return this.name;
+    }
+
+    public String getInformation() {
+        String result = "###### " + this.name + " ######\n" +
+                "Address: " + this.address + "\n" +
+                "Contact number: " + this.contactNumber + "\n";
+        return result;
+    }
 
     public abstract void accept(Visitor v);
 }

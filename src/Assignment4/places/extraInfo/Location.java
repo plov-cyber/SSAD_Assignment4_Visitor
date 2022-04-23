@@ -13,8 +13,14 @@ public class Location {
         return this.coordinates;
     }
 
+    public double getDistance(Location anotherLocation) {
+        Pair<Integer, Integer> anotherCoordinates = anotherLocation.getCoordinates();
+        return Math.sqrt(Math.pow(this.coordinates.getKey() - anotherCoordinates.getKey(), 2) +
+                Math.pow(this.coordinates.getValue() - anotherCoordinates.getValue(), 2));
+    }
+
     public String getAddressByCoordinates() {
-        // Get address by coordinates and return it
+        // Get address by coordinates and return it.
         return "";
     }
 }

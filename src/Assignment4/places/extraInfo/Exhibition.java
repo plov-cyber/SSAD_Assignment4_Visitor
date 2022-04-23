@@ -12,4 +12,11 @@ public class Exhibition {
         this.description = description;
         this.artists = artists;
     }
+
+    public String toString() {
+        String result = "\tDate: " + this.date + "\n" +
+                "\tDescription: " + this.description + "\n" +
+                "\tArtists: " + String.join(", ", this.artists) + "\n";
+        return result;
+    }
 }

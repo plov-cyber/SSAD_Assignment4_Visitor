@@ -23,8 +23,8 @@ public class Map {
     public void updatePlaces(Database database, Integer radius, Location location) {
         Visitor v = new InfoVisitor(this);
         for (Place place : database.getAllPlaces()) {
-            // Condition that distance < radius.
-            place.accept(v);
+            if (place.getLocation().getDistance(location) <= radius)
+                place.accept(v);
         }
     }
 

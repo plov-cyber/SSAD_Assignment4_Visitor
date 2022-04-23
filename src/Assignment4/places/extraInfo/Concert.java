@@ -10,4 +10,11 @@ public class Concert {
         this.date = date;
         this.cost = cost;
     }
+
+    public String toString() {
+        String result = "\tSinger: " + this.singer + "\n" +
+                "\tDate: " + this.date + "\n" +
+                "\tCost: " + this.cost + "$" + "\n";
+        return result;
+    }
 }

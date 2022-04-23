@@ -16,11 +16,6 @@ public class Restaurant extends Place {
         menu = new ArrayList<>();
     }
 
-    @Override
-    public String getInformation() {
-        return null;
-    }
-
     public Restaurant addDish(Dish dish) {
         menu.add(dish);
         return this;

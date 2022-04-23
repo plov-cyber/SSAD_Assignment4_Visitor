@@ -16,11 +16,6 @@ public class Theatre extends Place {
         affiche = new ArrayList<>();
     }
 
-    @Override
-    public String getInformation() {
-        return null;
-    }
-
     public void addConcert(Concert c) {
         affiche.add(c);
     }

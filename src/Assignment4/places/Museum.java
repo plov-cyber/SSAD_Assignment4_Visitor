@@ -16,11 +16,6 @@ public class Museum extends Place {
         exhibitions = new ArrayList<>();
     }
 
-    @Override
-    public String getInformation() {
-        return null;
-    }
-
     public Museum addExhibition(Exhibition ex) {
         exhibitions.add(ex);
         return this;
